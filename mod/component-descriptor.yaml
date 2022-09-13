@@ -1,0 +1,18 @@
+component:
+  componentReferences: []
+  name: kyma.project.io/module/loadtest
+  provider: internal
+  repositoryContexts: []
+  resources:
+  - access:
+      filename: sha256:1642e6b3b99ea73f284fa080a21d299f0c95b8ad47cac9b3ae93584b5c2df61a
+      mediaType: application/gzip
+      type: localFilesystemBlob
+    name: loadtest-operator
+    relation: local
+    type: helm-chart
+    version: 0.0.1
+  sources: []
+  version: 0.0.1
+meta:
+  schemaVersion: v2

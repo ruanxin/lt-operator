@@ -1,0 +1,15 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  labels:
+    app.kubernetes.io/component: lt-operator.kyma-project.io
+  name: lt-operator-leader-election-rolebinding
+  namespace: lt-operator-system
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: lt-operator-leader-election-role
+subjects:
+- kind: ServiceAccount
+  name: lt-operator-controller-manager
+  namespace: lt-operator-system

@@ -1,0 +1,16 @@
+domain: kyma-project.io
+layout:
+- go.kubebuilder.io/v4-alpha
+projectName: lt-operator
+repo: github.com/ruanxin/lt-operator/operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: kyma-project.io
+  group: operator
+  kind: LongOperation
+  path: github.com/ruanxin/lt-operator/operator/api/v1alpha1
+  version: v1alpha1
+version: "3"
