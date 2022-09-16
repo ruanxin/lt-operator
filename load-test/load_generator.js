@@ -35,7 +35,7 @@ export const options = {
 const kyma_loadtest_template = open('./util/lt-kyma.yaml')
 const module_template_template = open('./util/lt-module-template-remote.yaml')
 const secret_template = open('./util/lt-secret-worker.yaml')
-
+const MODULE_NUMBER = 2
 export function createKymaCRs() {
     const index = '2-' + __VU + '-' + __ITER;
     var componentName = 'manifest' + index;
@@ -44,7 +44,7 @@ export function createKymaCRs() {
     const kymaName = 'kyma-' + index
     deploySecret(kymaName)
     let kyma = kyma_loadtest_template.replace(/kyma-replace-me/g, kymaName);
-    for (let i = 1; i <= 20; i++) {
+    for (let i = 1; i <= MODULE_NUMBER; i++) {
         const moduleName = componentName +'-'+ i
         kyma += '    - name: ' + moduleName + '\n'
     }
@@ -56,7 +56,7 @@ export function createKymaCRs() {
 }
 
 function deployModuleTemplate(componentName) {
-    for (let i = 1; i <= 20; i++) {
+    for (let i = 1; i <= MODULE_NUMBER; i++) {
         const replace =  componentName  + '-'+ i
         const component = module_template_template.replace(/replace-me/g, replace);
         const cmd = "echo " + "'" + component + "'" + " | kubectl apply -f -"

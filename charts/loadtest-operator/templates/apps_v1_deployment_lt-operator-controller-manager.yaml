@@ -50,7 +50,7 @@ spec:
         - --leader-elect
         command:
         - /manager
-        image: europe-west3-docker.pkg.dev/sap-kyma-jellyfish-dev/operator-images/loadtest-operator:0.0.1
+        image: europe-west3-docker.pkg.dev/sap-kyma-jellyfish-dev/operator-images/loadtest-operator:0.0.2
         livenessProbe:
           httpGet:
             path: /healthz
