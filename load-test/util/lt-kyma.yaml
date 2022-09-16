@@ -1,0 +1,10 @@
+apiVersion: operator.kyma-project.io/v1alpha1
+kind: Kyma
+metadata:
+  name: kyma-replace-me
+  namespace: default
+spec:
+  channel: stable
+  sync:
+    enabled: true
+  modules:

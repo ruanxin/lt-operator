@@ -4,50 +4,23 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32defd0c-633f-447b-a837-a683929d0e0b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hack/gen-chart.sh" afterDir="false" />
+    <list default="true" id="32defd0c-633f-447b-a837-a683929d0e0b" name="Changes" comment="init">
+      <change afterPath="$PROJECT_DIR$/bin/kustomize" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/hack/gen-mod-template.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operator/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operator/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operator/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operator/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operator/PROJECT" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operator/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operator/api/v1alpha1/groupversion_info.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operator/api/v1alpha1/longoperation_types.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operator/api/v1alpha1/zz_generated.deepcopy.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operator/config/crd/kustomization.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operator/config/crd/kustomizeconfig.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operator/config/crd/patches/cainjection_in_longoperations.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operator/config/crd/patches/webhook_in_longoperations.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operator/config/default/kustomization.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operator/config/default/manager_auth_proxy_patch.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operator/config/default/manager_config_patch.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operator/config/manager/controller_manager_config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operator/config/manager/kustomization.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operator/config/manager/manager.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operator/config/prometheus/kustomization.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operator/config/prometheus/monitor.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operator/config/rbac/auth_proxy_client_clusterrole.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operator/config/rbac/auth_proxy_role.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operator/config/rbac/auth_proxy_role_binding.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operator/config/rbac/auth_proxy_service.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operator/config/rbac/kustomization.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operator/config/rbac/leader_election_role.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operator/config/rbac/leader_election_role_binding.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operator/config/rbac/longoperation_editor_role.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operator/config/rbac/longoperation_viewer_role.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operator/config/rbac/role_binding.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operator/config/rbac/service_account.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operator/config/samples/operator_v1alpha1_longoperation.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operator/controllers/longoperation_controller.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operator/controllers/suite_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operator/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operator/go.sum" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operator/hack/boilerplate.go.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operator/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/load-test/k6" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/load-test/load_generator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/load-test/util/k3d-secret-gen.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/load-test/util/lt-kyma.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/load-test/util/lt-module-template-remote.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/load-test/util/lt-secret-worker.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/load-test/util/public-key-secret.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/load-test/util/secret-local.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/load-test/util/secret-skr.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/load-test/util/secret-worker1.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/local.tar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/operator/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/operator/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +30,20 @@
   <component name="GOROOT" url="file:///usr/local/opt/go/libexec" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Makefile" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/charts/loadtest-operator/templates/apps_v1_deployment_lt-operator-controller-manager.yaml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/load-test/load_generator.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/load-test/util/k3d-secret-gen.sh" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/load-test/util/lt-kyma.yaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/load-test/util/lt-module-template-remote.yaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/load-test/util/lt-secret-worker.yaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/load-test/util/secret-skr.yaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/operator/Makefile" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/operator/go.mod" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/operator/main.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/template.yaml" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">
     <option name="context" value="k3d-lt4" />
@@ -72,40 +59,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.format.on.save.advertiser.fired": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "go.import.settings.migrated": "true",
-    "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "/Users/I552416/dev/src/github.com/ruanxin/lt-operator/hack",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/I552416/dev/src/github.com/ruanxin/lt-operator/load-test&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/load-test" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/hack" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/load-test" />
       <recent name="$PROJECT_DIR$/operator" />
     </key>
   </component>
-  <component name="RunManager" selected="Makefile Target.gen-module-template">
-    <configuration name="go build github.com/ruanxin/lt-operator" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Makefile Target.operator/docker-push">
+    <configuration name="go build github.com/ruanxin/lt-operator/operator" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="lt-operator" />
-      <working_directory value="$PROJECT_DIR$" />
+      <working_directory value="$PROJECT_DIR$/operator" />
       <envs>
         <env name="ENABLE_WEBHOOKS" value="false" />
         <env name="KUBECONFIG" value="$USER_HOME$/Downloads/kubeconfig--jellyfish--skr-cluster.yaml" />
       </envs>
       <kind value="PACKAGE" />
-      <package value="github.com/ruanxin/lt-operator" />
+      <package value="github.com/ruanxin/lt-operator/operator" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$/main.go" />
       <method v="2" />
@@ -122,24 +112,32 @@
       </makefile>
       <method v="2" />
     </configuration>
-    <configuration name="module-operator-chart" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
-      <makefile filename="$PROJECT_DIR$/Makefile" target="module-operator-chart" workingDirectory="" arguments="">
+    <configuration name="module-image" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="module-image" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <configuration name="operator/docker-push" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="operator/docker-push" workingDirectory="" arguments="">
         <envs />
       </makefile>
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Go Build.go build github.com/ruanxin/lt-operator" />
+      <item itemvalue="Go Build.go build github.com/ruanxin/lt-operator/operator" />
+      <item itemvalue="Makefile Target.module-image" />
+      <item itemvalue="Makefile Target.operator/docker-push" />
       <item itemvalue="Makefile Target.gen-module-template" />
       <item itemvalue="Makefile Target.module-build" />
-      <item itemvalue="Makefile Target.module-operator-chart" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Makefile Target.operator/docker-push" />
+        <item itemvalue="Makefile Target.module-image" />
+        <item itemvalue="Go Build.go build github.com/ruanxin/lt-operator/operator" />
         <item itemvalue="Makefile Target.gen-module-template" />
         <item itemvalue="Makefile Target.module-build" />
-        <item itemvalue="Makefile Target.module-operator-chart" />
-        <item itemvalue="Go Build.go build github.com/ruanxin/lt-operator" />
       </list>
     </recent_temporary>
   </component>

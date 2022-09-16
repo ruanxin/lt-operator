@@ -22,6 +22,25 @@ module-default:
 operator/manifests: ## Call Manifest Generation
 	$(MAKE) -C operator/ manifests
 
+.PHONY: operator/docker-build
+operator/docker-build:
+	IMG=$(IMG) $(MAKE) -C operator/ docker-build
+
+.PHONY: operator/docker-push
+operator/docker-push:
+ifneq (,$(GCR_DOCKER_PASSWORD))
+	docker login $(IMG_REGISTRY) -u oauth2accesstoken --password $(GCR_DOCKER_PASSWORD)
+endif
+	IMG=$(IMG) $(MAKE) -C operator/ docker-push
+
+# This will change the flags of the `kyma alpha module create` command in case we spot credentials
+# Otherwise we will assume http-based local registries without authentication (e.g. for k3d)
+ifeq (,$(MODULE_CREDENTIALS))
+MODULE_CREATION_FLAGS=--registry $(MODULE_REGISTRY) -w --insecure
+else
+MODULE_CREATION_FLAGS=--registry $(MODULE_REGISTRY) -w -c $(MODULE_CREDENTIALS)
+endif
+
 .PHONY: module-operator-chart
 module-operator-chart: operator/manifests kustomize ## Bundle the Module Operator Chart
 	mkdir -p "$(TEMPLATE_DIR)"/templates $(TEMPLATE_DIR)/crds/
@@ -32,14 +51,11 @@ module-operator-chart: operator/manifests kustomize ## Bundle the Module Operato
 
 .PHONY: module-build
 module-build: kyma module-operator-chart module-default ## Build the Module and push it to a registry defined in MODULE_REGISTRY
-	$(KYMA) alpha create module kyma.project.io/module/$(MODULE_NAME) $(MODULE_VERSION) . $(MODULE_CREATION_FLAGS) --registry $(MODULE_REGISTRY) \
-	-v \
-	--credentials oauth2accesstoken:
+	$(KYMA) alpha create module kyma.project.io/module/$(MODULE_NAME) $(MODULE_VERSION) . $(MODULE_CREATION_FLAGS)
 
-.PHONY: gen-module-template
-gen-module-template:
-	component-cli ca remote get $(MODULE_REGISTRY) kyma.project.io/module/$(MODULE_NAME) $(MODULE_VERSION) >
-	MODULE_NAME=$(MODULE_NAME) MODULE_VERSION=$(MODULE_VERSION)  $(GEN_MODULE_TEMPLATE)
+.PHONY: module-image
+module-image: operator/docker-build operator/docker-push ## Build the Module Image and push it to a registry defined in IMG_REGISTRY
+	echo "built and pushed module image $(IMG)"
 ##@ Tools
 
 ## Location to install dependencies to
