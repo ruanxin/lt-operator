@@ -84,15 +84,7 @@ func (m ManifestResolver) Get(obj types.BaseCustomObject) (types.InstallationSpe
 	return types.InstallationSpec{
 		ChartPath:   chartPath,
 		ReleaseName: sample.Name,
-		ChartFlags: types.ChartFlags{
-			ConfigFlags: types.Flags{
-				"Namespace":       chartNs,
-				"CreateNamespace": true,
-			},
-			SetFlags: types.Flags{
-				"nameOverride": nameOverride,
-			},
-		},
+		ChartFlags:  types.ChartFlags{},
 	}, nil
 }
 

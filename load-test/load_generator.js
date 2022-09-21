@@ -35,7 +35,7 @@ export const options = {
 const kyma_loadtest_template = open('./util/lt-kyma.yaml')
 const module_template_template = open('./util/lt-module-template-remote.yaml')
 const secret_template = open('./util/lt-secret-worker.yaml')
-const MODULE_NUMBER = 2
+const MODULE_NUMBER = 20
 export function createKymaCRs() {
     const index = '2-' + __VU + '-' + __ITER;
     var componentName = 'manifest' + index;
