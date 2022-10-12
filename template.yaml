@@ -8,7 +8,7 @@ metadata:
     "operator.kyma-project.io/controller-name": "manifest"
     "operator.kyma-project.io/module-name": "loadtest"
   annotations:
-    "operator.kyma-project.io/module-version": "0.0.2"
+    "operator.kyma-project.io/module-version": "0.0.3"
     "operator.kyma-project.io/module-provider": "internal"
     "operator.kyma-project.io/descriptor-schema-version": "v2"
 spec:
@@ -32,13 +32,13 @@ spec:
         type: ociRegistry
       resources:
       - access:
-          digest: sha256:9174bbbb5abd7ae7dc60018d0ff57e470f54d1d77517534e3172f00f2b8d58e9
+          digest: sha256:447211f82a218885394fec630e98ae42d799c1d954b5bad20c0ffd10916d58a9
           type: localOciBlob
         name: loadtest-operator
         relation: local
         type: helm-chart
-        version: 0.0.2
+        version: 0.0.3
       sources: []
-      version: 0.0.2
+      version: 0.0.3
     meta:
       schemaVersion: v2

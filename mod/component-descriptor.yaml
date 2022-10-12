@@ -8,14 +8,14 @@ component:
     type: ociRegistry
   resources:
   - access:
-      filename: sha256:9174bbbb5abd7ae7dc60018d0ff57e470f54d1d77517534e3172f00f2b8d58e9
+      filename: sha256:447211f82a218885394fec630e98ae42d799c1d954b5bad20c0ffd10916d58a9
       mediaType: application/gzip
       type: localFilesystemBlob
     name: loadtest-operator
     relation: local
     type: helm-chart
-    version: 0.0.2
+    version: 0.0.3
   sources: []
-  version: 0.0.2
+  version: 0.0.3
 meta:
   schemaVersion: v2

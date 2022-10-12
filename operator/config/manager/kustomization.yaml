@@ -13,4 +13,4 @@ kind: Kustomization
 images:
 - name: controller
   newName: europe-west3-docker.pkg.dev/sap-kyma-jellyfish-dev/operator-images/loadtest-operator
-  newTag: 0.0.2
+  newTag: 0.0.3

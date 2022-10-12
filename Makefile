@@ -1,5 +1,5 @@
 MODULE_NAME ?= loadtest
-MODULE_VERSION ?= 0.0.2
+MODULE_VERSION ?= 0.0.3
 
 TEMPLATE_DIR ?= charts/$(MODULE_NAME)-operator
 GEN_CHART ?= sh hack/gen-chart.sh

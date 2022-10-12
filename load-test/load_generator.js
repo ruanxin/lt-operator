@@ -4,7 +4,7 @@ import http from 'k6/http';
 import exec from 'k6/x/exec';
 
 const VU = 1;
-const ITERATION = 1;
+const ITERATION = 10;
 
 export const options = {
     scenarios: {
@@ -14,6 +14,7 @@ export const options = {
             vus: VU,
             iterations: ITERATION,
             gracefulStop: '1m',
+            maxDuration: '100m'
         },
         // tracking_alerts: {
         //     exec: 'trackingAlerts',
