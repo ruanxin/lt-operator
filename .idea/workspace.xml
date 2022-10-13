@@ -5,21 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32defd0c-633f-447b-a837-a683929d0e0b" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/bin/kustomize" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hack/gen-mod-template.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/load-test/guide.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tmp/local.tar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/charts/loadtest-operator/Chart.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/charts/loadtest-operator/Chart.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/charts/loadtest-operator/templates/apps_v1_deployment_lt-operator-controller-manager.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/charts/loadtest-operator/templates/apps_v1_deployment_lt-operator-controller-manager.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/load-test/load_generator.js" beforeDir="false" afterPath="$PROJECT_DIR$/load-test/load_generator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/load-test/util/k3d-secret-gen.sh" beforeDir="false" afterPath="$PROJECT_DIR$/load-test/util/k3d-secret-gen.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/load-test/util/lt-module-template-remote.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/load-test/util/lt-module-template-remote.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mod/component-descriptor.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mod/component-descriptor.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/operator/config/manager/kustomization.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/operator/config/manager/kustomization.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/operator/config/manager/manager.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/operator/config/manager/manager.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/template.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +137,8 @@
     <MESSAGE value="- update crd&#10;- add dummy helm chart" />
     <MESSAGE value="update Dockerfile" />
     <MESSAGE value="update README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="update README.md" />
+    <MESSAGE value="update new module" />
+    <option name="LAST_COMMIT_MESSAGE" value="update new module" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
