@@ -28,7 +28,7 @@ export const options = {
         // }
     },
     thresholds: {
-        'checks{scenario:create_kyma_crs}': ['rate==1'], // no errors
+        'checks{scenario:create_kyma_crs}': ['rate==1'], // no errors/
         // 'checks{scenario:tracking_alerts}': ['rate==1'], // no alerts
     },
 
