@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32defd0c-633f-447b-a837-a683929d0e0b" name="Changes" comment="init">
+    <list default="true" id="32defd0c-633f-447b-a837-a683929d0e0b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/load-test/load_generator.js" beforeDir="false" afterPath="$PROJECT_DIR$/load-test/load_generator.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +139,8 @@
     <MESSAGE value="update Dockerfile" />
     <MESSAGE value="update README.md" />
     <MESSAGE value="update new module" />
-    <option name="LAST_COMMIT_MESSAGE" value="update new module" />
+    <MESSAGE value="add diagram" />
+    <option name="LAST_COMMIT_MESSAGE" value="add diagram" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
