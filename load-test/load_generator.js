@@ -3,8 +3,8 @@ import {check, sleep, fail} from 'k6';
 import http from 'k6/http';
 import exec from 'k6/x/exec';
 
-const VU = 5;
-const ITERATION = 20;
+const VU = 20;
+const ITERATION = 200;
 
 export const options = {
     scenarios: {
@@ -37,11 +37,10 @@ const kyma_loadtest_template = open('./util/lt-kyma.yaml')
 const module_template_template = open('./util/lt-module-template-remote.yaml')
 const secret_template = open('./util/lt-secret-worker.yaml')
 const MODULE_NUMBER = 20
-export function createKymaCRs() {
-    const index = '2-' + __VU + '-' + __ITER;
-    var componentName = 'manifest' + index;
-    deployModuleTemplate(componentName)
+const componentName = 'manifest';
 
+export function createKymaCRs() {
+    const index = '-' + __VU + '-' + __ITER;
     const kymaName = 'kyma-' + index
     deploySecret(kymaName)
     let kyma = kyma_loadtest_template.replace(/kyma-replace-me/g, kymaName);
@@ -106,6 +105,7 @@ export function trackingAlerts() {
 
 
 export function setup() {
+    deployModuleTemplate(componentName)
 }
 
 export function teardown(data) {
