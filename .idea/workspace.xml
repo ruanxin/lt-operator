@@ -7,8 +7,8 @@
     <list default="true" id="32defd0c-633f-447b-a837-a683929d0e0b" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/load-test/finding.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/load-test/guide.md" beforeDir="false" afterPath="$PROJECT_DIR$/load-test/guide.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/load-test/load_generator.js" beforeDir="false" afterPath="$PROJECT_DIR$/load-test/load_generator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/load-test/4k-kyma/profile_klm" beforeDir="false" afterPath="$PROJECT_DIR$/load-test/4k-kyma/cpu_profile_klm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/load-test/4k-kyma/profile_kmm" beforeDir="false" afterPath="$PROJECT_DIR$/load-test/4k-kyma/cpu_profile_kmm" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
