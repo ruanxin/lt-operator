@@ -3,7 +3,7 @@ import {check, sleep, fail} from 'k6';
 import http from 'k6/http';
 import exec from 'k6/x/exec';
 
-const VU = 20;
+const VU = 50;
 const ITERATION = 200;
 
 export const options = {

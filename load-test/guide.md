@@ -9,3 +9,4 @@
   ``` 
   ./k6 run load_generator.js
   ```  
+
