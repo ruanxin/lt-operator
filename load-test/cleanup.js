@@ -1,13 +1,22 @@
 import {check, sleep, fail} from 'k6';
 import exec from 'k6/x/exec';
 
-const VU = 10;
-const ITERATION = 100;
+const VU = 50;
+const ITERATION = 200;
 
 export const options = {
     scenarios: {
-        delete_module_template_crs: {
-            exec: 'deleteMTCRs',
+        // remove_finalizers: {
+        //     exec: 'removeFinalizers',
+        //     executor: 'per-vu-iterations',
+        //     vus: VU,
+        //     iterations: ITERATION,
+        //     gracefulStop: '1m',
+        //     maxDuration: '100m'
+        // },
+
+        delete_manifests: {
+            exec: 'deleteManifests',
             executor: 'per-vu-iterations',
             vus: VU,
             iterations: ITERATION,
@@ -26,20 +35,39 @@ export const options = {
         // }
     },
     thresholds: {
-        'checks{scenario:delete_module_template_crs}': ['rate==1'], // no errors/
+        // 'checks{scenario:delete_module_template_crs}': ['rate==1'], // no errors/
         // 'checks{scenario:tracking_alerts}': ['rate==1'], // no alerts
     },
 
 };
-export function deleteMTCRs() {
+export function removeFinalizers() {
     for(let i = 1; i <= 20; ++i) {
-        const index = '2-' + __VU + '-' + __ITER + '-' + i;
-        const moduleTemplate = 'manifest' + index;
-        console.log("deleting: ", moduleTemplate)
-        const cmd1 = "kubectl delete --ignore-not-found=true --force moduletemplates " + moduleTemplate
-        const out = exec.command('bash', ['-c', cmd1]);
-        console.log("out:", out)
-        check(outKyma, {"moduletemplate deleted": (out) => out.includes("force deleted")})
-        sleep(1);
+        const index = '--' + __VU + '-' + __ITER + '-manifest-' + i;
+        const manifests = 'kyma' + index;
+        console.log("deleting: ", manifests)
+        const cmd = "kubectl patch manifest -p '{\"metadata\":{\"finalizers\":null}}' --type=merge " + manifests +"  || true"
+        try {
+            const out = exec.command('bash', ['-c', cmd]);
+            console.log("out:", out)
+        } catch (e) {
+            fail("ignore");
+        }
+        // sleep(1);
+    }
+}
+
+export function deleteManifests() {
+    for(let i = 1; i <= 20; ++i) {
+        const index = '--' + __VU + '-' + __ITER + '-manifest-' + i;
+        const manifests = 'kyma' + index;
+        console.log("deleting: ", manifests)
+        const cmd = "kubectl delete manifest --wait=false " + manifests +"  || true"
+        try {
+            const out = exec.command('bash', ['-c', cmd]);
+            console.log("out:", out)
+        } catch (e) {
+            fail("ignore");
+        }
+        // sleep(1);
     }
 }
