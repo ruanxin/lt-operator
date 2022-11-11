@@ -3,8 +3,8 @@ import {check, sleep, fail} from 'k6';
 import http from 'k6/http';
 import exec from 'k6/x/exec';
 
-const VU = 50;
-const ITERATION = 200;
+const VU = 1;
+const ITERATION = 1;
 
 export const options = {
     scenarios: {
@@ -40,18 +40,18 @@ const MODULE_NUMBER = 20
 const componentName = 'manifest';
 
 export function createKymaCRs() {
-    const index = '-' + __VU + '-' + __ITER;
-    const kymaName = 'kyma-' + index
-    deploySecret(kymaName)
-    let kyma = kyma_loadtest_template.replace(/kyma-replace-me/g, kymaName);
-    for (let i = 1; i <= MODULE_NUMBER; i++) {
-        const moduleName = componentName +'-'+ i
-        kyma += '    - name: ' + moduleName + '\n'
-    }
-    const cmd = "echo " + "'" + kyma + "'" + " | kubectl apply -f -"
-    const out = exec.command('bash', ['-c', cmd]);
-    console.log("creating: ", kymaName);
-    check(out, {'kyma created': (out) => out.includes(kymaName)})
+    // const index = '-' + __VU + '-' + __ITER;
+    // const kymaName = 'kyma-' + index
+    // deploySecret(kymaName)
+    // let kyma = kyma_loadtest_template.replace(/kyma-replace-me/g, kymaName);
+    // for (let i = 1; i <= MODULE_NUMBER; i++) {
+    //     const moduleName = componentName +'-'+ i
+    //     kyma += '    - name: ' + moduleName + '\n'
+    // }
+    // const cmd = "echo " + "'" + kyma + "'" + " | kubectl apply -f -"
+    // const out = exec.command('bash', ['-c', cmd]);
+    // console.log("creating: ", kymaName);
+    // check(out, {'kyma created': (out) => out.includes(kymaName)})
     sleep(1);
 }
 

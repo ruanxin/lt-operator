@@ -1,5 +1,5 @@
 MODULE_NAME ?= loadtest
-MODULE_VERSION ?= 0.0.3
+MODULE_VERSION ?= 0.0.4
 
 TEMPLATE_DIR ?= charts/$(MODULE_NAME)-operator
 GEN_CHART ?= sh hack/gen-chart.sh
@@ -51,7 +51,7 @@ module-operator-chart: operator/manifests kustomize ## Bundle the Module Operato
 
 .PHONY: module-build
 module-build: kyma module-operator-chart module-default ## Build the Module and push it to a registry defined in MODULE_REGISTRY
-	$(KYMA) alpha create module kyma.project.io/module/$(MODULE_NAME) $(MODULE_VERSION) . $(MODULE_CREATION_FLAGS)
+	$(KYMA) alpha create module --validateCR=false kyma.project.io/module/$(MODULE_NAME) $(MODULE_VERSION) . $(MODULE_CREATION_FLAGS)
 
 .PHONY: module-image
 module-image: operator/docker-build operator/docker-push ## Build the Module Image and push it to a registry defined in IMG_REGISTRY

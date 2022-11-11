@@ -8,7 +8,7 @@ metadata:
     "operator.kyma-project.io/controller-name": "manifest"
     "operator.kyma-project.io/module-name": "loadtest"
   annotations:
-    "operator.kyma-project.io/module-version": "0.0.3"
+    "operator.kyma-project.io/module-version": "0.0.4"
     "operator.kyma-project.io/module-provider": "internal"
     "operator.kyma-project.io/descriptor-schema-version": "v2"
 spec:
@@ -20,6 +20,7 @@ spec:
     metadata:
       name: longoperation-sample
     spec:
+      foo: bar
       # TODO(user): Add fields here
   descriptor:
     component:
@@ -32,13 +33,13 @@ spec:
         type: ociRegistry
       resources:
       - access:
-          digest: sha256:447211f82a218885394fec630e98ae42d799c1d954b5bad20c0ffd10916d58a9
+          digest: sha256:4d1293833dcc851452895441d123fc73aa0ea3870bd1b316c16f59644183eea9
           type: localOciBlob
         name: loadtest-operator
         relation: local
         type: helm-chart
-        version: 0.0.3
+        version: 0.0.4
       sources: []
-      version: 0.0.3
+      version: 0.0.4
     meta:
       schemaVersion: v2

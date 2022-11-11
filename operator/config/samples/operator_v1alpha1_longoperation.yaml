@@ -3,4 +3,5 @@ kind: LongOperation
 metadata:
   name: longoperation-sample
 spec:
+  foo: bar
   # TODO(user): Add fields here

@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32defd0c-633f-447b-a837-a683929d0e0b" name="Changes" comment="" />
+    <list default="true" id="32defd0c-633f-447b-a837-a683929d0e0b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/kustomize" beforeDir="false" afterPath="$PROJECT_DIR$/bin/kustomize" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/loadtest-operator/Chart.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/charts/loadtest-operator/Chart.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/loadtest-operator/templates/apps_v1_deployment_lt-operator-controller-manager.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/charts/loadtest-operator/templates/apps_v1_deployment_lt-operator-controller-manager.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/default.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/default.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/load-test/load_generator.js" beforeDir="false" afterPath="$PROJECT_DIR$/load-test/load_generator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/load-test/util/lt-module-template-remote.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/load-test/util/lt-module-template-remote.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mod/component-descriptor.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mod/component-descriptor.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/operator/config/manager/kustomization.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/operator/config/manager/kustomization.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/operator/config/samples/operator_v1alpha1_longoperation.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/operator/config/samples/operator_v1alpha1_longoperation.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/template.yaml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,22 +55,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.format.on.save.advertiser.fired": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "go.import.settings.migrated": "true",
-    "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "/Users/I552416/dev/src/github.com/ruanxin/lt-operator/load-test",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/I552416/dev/src/github.com/ruanxin/lt-operator/load-test&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/load-test" />
