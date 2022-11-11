@@ -6,14 +6,14 @@ const ITERATION = 200;
 
 export const options = {
     scenarios: {
-        // remove_finalizers: {
-        //     exec: 'removeFinalizers',
-        //     executor: 'per-vu-iterations',
-        //     vus: VU,
-        //     iterations: ITERATION,
-        //     gracefulStop: '1m',
-        //     maxDuration: '100m'
-        // },
+        remove_finalizers: {
+            exec: 'removeFinalizers',
+            executor: 'per-vu-iterations',
+            vus: VU,
+            iterations: ITERATION,
+            gracefulStop: '1m',
+            maxDuration: '100m'
+        },
 
         delete_manifests: {
             exec: 'deleteManifests',
