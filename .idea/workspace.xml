@@ -4,8 +4,30 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32defd0c-633f-447b-a837-a683929d0e0b" name="Changes" comment="">
+    <list default="true" id="32defd0c-633f-447b-a837-a683929d0e0b" name="Changes" comment="update channel">
+      <change afterPath="$PROJECT_DIR$/load-test/cleanup-kyma.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/loadtest-operator/Chart.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/loadtest-operator/crds/apiextensions.k8s.io_v1_customresourcedefinition_longoperations.operator.kyma-project.io.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/loadtest-operator/templates/apps_v1_deployment_lt-operator-controller-manager.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/loadtest-operator/templates/rbac.authorization.k8s.io_v1_clusterrole_lt-operator-manager-role.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/loadtest-operator/templates/rbac.authorization.k8s.io_v1_clusterrole_lt-operator-metrics-reader.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/loadtest-operator/templates/rbac.authorization.k8s.io_v1_clusterrole_lt-operator-proxy-role.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/loadtest-operator/templates/rbac.authorization.k8s.io_v1_clusterrolebinding_lt-operator-manager-rolebinding.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/loadtest-operator/templates/rbac.authorization.k8s.io_v1_clusterrolebinding_lt-operator-proxy-rolebinding.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/loadtest-operator/templates/rbac.authorization.k8s.io_v1_role_lt-operator-leader-election-role.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/loadtest-operator/templates/rbac.authorization.k8s.io_v1_rolebinding_lt-operator-leader-election-rolebinding.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/loadtest-operator/templates/v1_configmap_lt-operator-manager-config.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/loadtest-operator/templates/v1_namespace_lt-operator-system.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/loadtest-operator/templates/v1_service_lt-operator-controller-manager-metrics-service.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/loadtest-operator/templates/v1_serviceaccount_lt-operator-controller-manager.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/load-test/cleanup.js" beforeDir="false" afterPath="$PROJECT_DIR$/load-test/cleanup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mod/blobs/sha256:1642e6b3b99ea73f284fa080a21d299f0c95b8ad47cac9b3ae93584b5c2df61a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mod/blobs/sha256:e83139edc9de07bbefad53ac48947257f0be7434c7010e3b9024e3b486dcf25d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mod/component-descriptor.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mod/component-descriptor.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/operator/config/manager/kustomization.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/operator/config/manager/kustomization.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/template.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,7 +40,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Makefile" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/charts/loadtest-operator/templates/apps_v1_deployment_lt-operator-controller-manager.yaml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/load-test/load_generator.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/load-test/util/k3d-secret-gen.sh" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/load-test/util/lt-kyma.yaml" root0="FORCE_HIGHLIGHTING" />
@@ -142,7 +163,8 @@
     <MESSAGE value="fix load test script" />
     <MESSAGE value="update module template version" />
     <MESSAGE value="update cleanup script" />
-    <option name="LAST_COMMIT_MESSAGE" value="update cleanup script" />
+    <MESSAGE value="update channel" />
+    <option name="LAST_COMMIT_MESSAGE" value="update channel" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

@@ -3,19 +3,27 @@ component:
   name: kyma.project.io/module/loadtest
   provider: internal
   repositoryContexts:
-  - baseUrl: europe-west3-docker.pkg.dev/sap-kyma-jellyfish-dev/loadtest-operator/unsigned
+  - baseUrl: https://registry-1.docker.io/xinruan718
     componentNameMapping: urlPath
     type: ociRegistry
   resources:
   - access:
-      filename: sha256:4d1293833dcc851452895441d123fc73aa0ea3870bd1b316c16f59644183eea9
+      filename: sha256:f4a1c45fb84ec985c48f0aba0456f07d933abc008dac9ad3ef3ddfde553207c6
       mediaType: application/gzip
       type: localFilesystemBlob
     name: loadtest-operator
     relation: local
     type: helm-chart
-    version: 0.0.4
-  sources: []
-  version: 0.0.4
+    version: 0.0.5
+  sources:
+  - access:
+      commit: 953430549a45e4ebeabe2197500c3e11f734052d
+      ref: refs/heads/master
+      repoUrl: https://github.com/ruanxin/lt-operator
+      type: github
+    name: lt-operator
+    type: git
+    version: 0.0.5
+  version: 0.0.5
 meta:
   schemaVersion: v2

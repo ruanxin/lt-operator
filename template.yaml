@@ -8,38 +8,44 @@ metadata:
     "operator.kyma-project.io/controller-name": "manifest"
     "operator.kyma-project.io/module-name": "loadtest"
   annotations:
-    "operator.kyma-project.io/module-version": "0.0.4"
+    "operator.kyma-project.io/module-version": "0.0.5"
     "operator.kyma-project.io/module-provider": "internal"
     "operator.kyma-project.io/descriptor-schema-version": "v2"
 spec:
   target: remote
   channel: regular
   data:
-    apiVersion: operator.kyma-project.io/v1alpha1
-    kind: LongOperation
-    metadata:
-      name: longoperation-sample
-    spec:
-      foo: bar
-      # TODO(user): Add fields here
+
   descriptor:
     component:
       componentReferences: []
       name: kyma.project.io/module/loadtest
       provider: internal
       repositoryContexts:
-      - baseUrl: europe-west3-docker.pkg.dev/sap-kyma-jellyfish-dev/loadtest-operator/unsigned
+      - baseUrl: europe-west3-docker.pkg.dev/sap-kyma-jellyfish-dev/loadtest-operator-private/unsigned
         componentNameMapping: urlPath
         type: ociRegistry
+
       resources:
       - access:
-          digest: sha256:4d1293833dcc851452895441d123fc73aa0ea3870bd1b316c16f59644183eea9
+          digest: sha256:9cce0ed354170b5a3e2c3f7298efc647cdd7abfd7e8c3771aac17f59281d8103
           type: localOciBlob
         name: loadtest-operator
         relation: local
         type: helm-chart
-        version: 0.0.4
-      sources: []
-      version: 0.0.4
+        version: 0.0.5
+        labels:
+          - name: "operator.kyma-project.io/oci-registry-cred"
+            value: "test-operator"
+      sources:
+      - access:
+          commit: 953430549a45e4ebeabe2197500c3e11f734052d
+          ref: refs/heads/master
+          repoUrl: https://github.com/ruanxin/lt-operator
+          type: github
+        name: lt-operator
+        type: git
+        version: 0.0.5
+      version: 0.0.5
     meta:
       schemaVersion: v2

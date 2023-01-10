@@ -1,12 +1,13 @@
 MODULE_NAME ?= loadtest
-MODULE_VERSION ?= 0.0.4
+MODULE_VERSION ?= 0.0.5
 
 TEMPLATE_DIR ?= charts/$(MODULE_NAME)-operator
 GEN_CHART ?= sh hack/gen-chart.sh
 GEN_MODULE_TEMPLATE ?= sh hack/gen-mod-template.sh
 
 # Module Registry used for pushing the image
-MODULE_REGISTRY ?= europe-west3-docker.pkg.dev/sap-kyma-jellyfish-dev/$(MODULE_NAME)-operator/unsigned
+#MODULE_REGISTRY ?= europe-west3-docker.pkg.dev/sap-kyma-jellyfish-dev/$(MODULE_NAME)-operator-private/unsigned
+MODULE_REGISTRY ?= https://registry-1.docker.io/xinruan718
 # Desired Channel of the Generated Module Template
 MODULE_TEMPLATE_CHANNEL ?= stable
 
@@ -51,7 +52,8 @@ module-operator-chart: operator/manifests kustomize ## Bundle the Module Operato
 
 .PHONY: module-build
 module-build: kyma module-operator-chart module-default ## Build the Module and push it to a registry defined in MODULE_REGISTRY
-	$(KYMA) alpha create module --validateCR=false kyma.project.io/module/$(MODULE_NAME) $(MODULE_VERSION) . $(MODULE_CREATION_FLAGS)
+	$(KYMA) alpha create module -n kyma.project.io/module/$(MODULE_NAME) -v -p ./charts/loadtest-operator --version $(MODULE_VERSION) $(MODULE_CREATION_FLAGS)
+
 
 .PHONY: module-image
 module-image: operator/docker-build operator/docker-push ## Build the Module Image and push it to a registry defined in IMG_REGISTRY
